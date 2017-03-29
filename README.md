@@ -23,4 +23,17 @@ end i
     end while
  end for
  
+ #Selection Sort
+ Remember list is scanned for minValue.
+ #Pseudo
+ 
+ for i to length
+ minValue=element at i
+    for j=i to length
+        if minValue>element at j
+        swap minValue,element at J
+        end j
+ end i
+    
+ 
     
