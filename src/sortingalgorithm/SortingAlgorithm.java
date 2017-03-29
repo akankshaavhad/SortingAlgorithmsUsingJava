@@ -44,10 +44,27 @@ public class SortingAlgorithm {
         return list;
     }
     
+    public int[] selectionSort(int[] list){
+        int minValue,temp;
+        for(int i=0;i<list.length;i++){
+            minValue=list[i];
+          
+            for(int j=i;j<list.length;j++){
+                if(list[j]<minValue){
+                    temp=list[j];
+                    list[i]=temp;
+                    list[j]=minValue;
+                }
+            }
+        }
+        
+        return list;
+    }
+    
     public static void main(String[] args) {
         // TODO code application logic here
         SortingAlgorithm sm=new SortingAlgorithm();
-        int[] a={9,6,4,1, 7, 8, 3, 9};
+        int[] a={9,6,4,1, 7, 8, 10, 23, 3, 9};
         int[] outputbubble=sm.bubbleSort(a);
         System.out.print("Bubble Sort:- ");
         for(int k=0;k<=outputbubble.length-1;k++){
@@ -60,6 +77,14 @@ public class SortingAlgorithm {
         System.out.print("Insertion Sort:- ");
         for(int k=0;k<=outputinsertion.length-1;k++){
             System.out.print(outputinsertion[k]);
+            System.out.print(" ");
+        }
+        System.out.println();
+        System.out.println("=============================================");
+        int[] outputselection=sm.selectionSort(a);
+        System.out.print("Selection Sort:- ");
+        for(int k=0;k<=outputselection.length-1;k++){
+            System.out.print(outputselection[k]);
             System.out.print(" ");
         }
     }
