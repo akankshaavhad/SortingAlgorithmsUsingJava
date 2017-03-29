@@ -11,7 +11,9 @@ Implementation of sorting algorithm using java
 end j
 end i
  
- Insertion Sort
+ #Insertion Sort
+ Remember elements on left should always be sorted.
+ #Pseudo
  for i to length
     key=element at i
     j=i-1
