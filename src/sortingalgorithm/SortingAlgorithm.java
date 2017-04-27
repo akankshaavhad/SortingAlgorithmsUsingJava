@@ -5,6 +5,8 @@
  */
 package sortingalgorithm;
 
+import java.util.Arrays;
+
 /**
  *
  * @author aavha
@@ -47,7 +49,13 @@ public class SortingAlgorithm {
         MergeSort mergeSort=new MergeSort();
         int[] amerge = {9, 6, 4, 1, 7, 8, 10, 23, 3, 9};
         mergeSort.mergeSort(amerge);
-
+        
+        System.out.println();
+        System.out.println("=============================================");
+        QuickSort quick=new QuickSort();
+        int[] aquick = {9, 6, 4, 1, 7, 8, 10, 23, 3, 9};
+        quick.quicksort(aquick,0,aquick.length-1);
+         System.out.println(Arrays.toString(aquick));
     }
 
 }
